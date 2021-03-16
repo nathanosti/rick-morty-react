@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brown: #44281d;
+  --bege: #e4a788;
+  --yellow: #f0e14a;
+  --green: #97ce4c;
+  --pink: #e89ac7;
+  --blue: #BBE0F2;
+  --gray: #DBD6D0
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
