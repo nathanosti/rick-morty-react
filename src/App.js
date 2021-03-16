@@ -2,16 +2,12 @@ import Cards from './components/Card/Cards';
 
 import './global.css';
 import 'semantic-ui-css/semantic.min.css'
-import { Grid } from 'semantic-ui-react'
 
-function App() {
+export default function App() {
+
   return (
     <>
-      <div className="cardsContainer">
-        <Cards />
-      </div>
+      <Cards />
     </>
-  );
+  )
 }
-
-export default App;

@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import 'semantic-ui-css/semantic.min.css'
+import { Container, Card, Image, List, Grid, GridColumn } from 'semantic-ui-react'
 import { getCharacter } from '../../actions/character';
 
-import 'semantic-ui-css/semantic.min.css'
-import { Card, Image, List, Grid } from 'semantic-ui-react'
+import './Cards.css';
+
+
 
 export default function Cards() {
   const [chars, setChars] = useState([]);
@@ -15,14 +18,14 @@ export default function Cards() {
   }, [])
 
   return (
-    <>
-      <List as='ul'>
-        <Grid>
-          <Grid.Row>
+    <Container fluid>
+      <List className='teste3'  as='ul'>
+        <Grid columns={4}>
+          <Grid.Row centered>
             {
               chars.map((char) => (
-                <List.Item as='li' key={char.id}>
-                  <Card>
+                <List.Item className='listItem' as='li' key={char.id}>
+                  <Card className='cardHeight'>
                     <Image src={char.image} />
                     <Card.Content>
                       <Card.Header content={char.name} />
@@ -35,9 +38,9 @@ export default function Cards() {
                 </List.Item>
               ))
             }
-          </Grid.Row>
+            </Grid.Row>
         </Grid>
       </List>
-    </>
+    </Container>
   )
 }
