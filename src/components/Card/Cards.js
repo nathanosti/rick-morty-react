@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getCharacter } from '../../actions/character';
 
 import 'semantic-ui-css/semantic.min.css'
-import { Card, Icon, Image, List, Grid } from 'semantic-ui-react'
+import { Card, Image, List, Grid } from 'semantic-ui-react'
 
 export default function Cards() {
   const [chars, setChars] = useState([]);
