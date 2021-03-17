@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import 'semantic-ui-css/semantic.min.css'
-import { Container, Card, Image, List, Grid, GridColumn } from 'semantic-ui-react'
+import { Container, Card, Image, List, Grid } from 'semantic-ui-react'
 import { getCharacter } from '../../actions/character';
 
 import './Cards.css';
@@ -19,7 +19,7 @@ export default function Cards() {
 
   return (
     <Container fluid>
-      <List className='teste3'  as='ul'>
+      <List  as='ul'>
         <Grid columns={4}>
           <Grid.Row centered>
             {
