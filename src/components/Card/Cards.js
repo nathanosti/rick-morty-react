@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'semantic-ui-css/semantic.min.css'
 import { Container, Card, Image, List, Grid } from 'semantic-ui-react'
-import { getCharacter } from '../../actions/character';
+import { getCharacter } from '../../actions/gets';
 
 import './Cards.css';
 

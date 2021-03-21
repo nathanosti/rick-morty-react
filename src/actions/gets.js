@@ -6,3 +6,8 @@ export async function getCharacter() {
   
   return results
 }
+
+export async function getLocation() {
+  const { data } = await api.get('./locations');
+  const { results = [] } = data;
+}
