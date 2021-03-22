@@ -1,29 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import 'semantic-ui-css/semantic.min.css'
-import { Container, Card, Image, List, Grid } from 'semantic-ui-react'
-import { getCharacter } from '../../actions/gets';
+import { useDispatch, useSelector } from 'react-redux'
+import { getCharacters } from '../../actions/rickandmorty'
+import 'semantic-ui-css/semantic.min.css';
+import { Container, Card, Image, List, Grid } from 'semantic-ui-react';
 
 import './Cards.css';
 
-
-
 export default function Cards() {
-  const [chars, setChars] = useState([]);
+  const dispatch = useDispatch()
 
+  const store = useSelector(state => state)
+  
   useEffect(() => {
-    async function loadApi() {
-      setChars(await getCharacter());
-    }
-    loadApi();
+    dispatch(getCharacters())
   }, [])
 
   return (
     <Container fluid>
+      <h1>teste</h1>
       <List  as='ul'>
         <Grid columns={4}>
           <Grid.Row centered>
             {
-              chars.map((char) => (
+              store.rickandmorty.characters.map((char) => (
                 <List.Item className='listItem' as='li' key={char.id}>
                   <Card className='cardHeight'>
                     <Image src={char.image} />
